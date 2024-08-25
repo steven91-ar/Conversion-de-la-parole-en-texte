@@ -1,3 +1,9 @@
+L'application a été créée en utilisant React JS pour la structure front-end, accompagné de Chakra UI pour la conception de l'interface utilisateur. Axios a été utilisé pour gérer les requêtes HTTP vers l'API d'AssemblyAI, permettant de soumettre des enregistrements audio, de suivre l'état du traitement et de récupérer les résultats des analyses. L'ensemble du processus a été guidé par une logique modulaire, où chaque fonctionnalité (comme l'analyse de sentiment ou la détection d'entités) a été implémentée dans des composants React spécifiques.
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
