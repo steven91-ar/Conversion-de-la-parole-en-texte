@@ -1,9 +1,11 @@
+/* eslint-disable react/jsx-no-undef */
 import React from 'react';
 import { Avatar, ChakraProvider,  Box,  VStack,  Grid,  theme,} from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import { Recorder } from 'react-voice-recorder';
 import 'react-voice-recorder/dist/index.css';
 import axios from 'axios';
+
 
 const assemblyApi = axios.create({
   baseURL: 'https://api.assemblyai.com/v2',
@@ -82,6 +84,13 @@ const handleAudioUpload = async audioFile => {
             name='Assembly AI'
             src='https://unsplash.com/photos/blue-plastic-robot-toy-R4WCbazrD1g'
             />
+            <Box>
+              {transcript.text && transcript.status === 'completed' ? (
+                <Result transcript={transcript} />
+              ) : ( 
+                <Status isLoading={isLoading} status={transcript.status} /> 
+              )}
+            </Box>
             <Box width={1000}>
             <Recorder
             record={true}
